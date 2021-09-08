@@ -1,8 +1,11 @@
 .board{
     font-family: 'Press Start 2P';
     flex-wrap:wrap;
-    width: 700px;
+    max-width: 600px;
     height: 600px;
-    margin: 0 auto;
+    margin: 100px auto;
     justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }

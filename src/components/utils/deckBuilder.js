@@ -1,9 +1,10 @@
-import shuffle from 'lodash.shuffle'
+import shuffle from 'lodash.shuffle';
+import Emojis from './emojis';
 const CARD_NUMBER = 20;
 
 export default () => {
 
-    const emojis= ['icon-2', 'icon-3']
+    const emojis= Emojis();
 
     let cards = [];
 
