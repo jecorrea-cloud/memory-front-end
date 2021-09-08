@@ -1,0 +1,23 @@
+header{
+    height: 50px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-family: "Press Start 2P";
+}
+
+.title{
+    font-size: 19px;
+    padding: 10px;
+    color:blanchedalmond;
+    font-family: "Press Start 2P";
+}
+
+.restart-button{
+    position: absolute;
+    left: 12px;
+    top: 58px;
+    font-family: "Press Start 2P";
+}
