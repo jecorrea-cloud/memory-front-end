@@ -7,7 +7,7 @@ export default class Board extends Component {
         const cards =[1,2,3,4,5]
         return (
             <div className="board">
-                {cards.map(card=><Card></Card>)}
+                {cards.map(card=><Card> </Card>)}
             </div>
         )
     }
