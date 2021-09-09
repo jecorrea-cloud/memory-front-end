@@ -4,10 +4,10 @@ import Card from "./Card"
 
 export default class Board extends Component {
     render() {
-        const cards =[1,2,3,4,5]
+        // const cards =[1,2,3,4,5]
         return (
             <div className="board">
-                {cards.map(card=><Card> </Card>)}
+                {this.props.deck.map((card)=><Card emoji={card.emoji}/>)}
             </div>
         )
     }

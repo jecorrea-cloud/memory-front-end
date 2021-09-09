@@ -3,7 +3,7 @@
     flex-wrap:wrap;
     max-width: 600px;
     height: 600px;
-    margin: 100px auto;
+    margin: 10px auto;
     justify-content: space-around;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
