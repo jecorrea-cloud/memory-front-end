@@ -11,7 +11,7 @@ const getInitialState = () => {
 
 export default class App extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = getInitialState();
   }
   render() {
@@ -19,7 +19,8 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <Board 
-          deck = {this.state.deck}/>
+          deck = {this.state.deck}
+        />
       </div>
     )
   }

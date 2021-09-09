@@ -1,18 +1,18 @@
 import shuffle from 'lodash.shuffle';
-import Emojis from './emojis';
+import FontAwesomeClasses from './fontAwesomeClasses';
 const CARD_NUMBER = 20;
 
 export default () => {
 
-    const emojis= Emojis();
+    const fontAwesomeClasses= FontAwesomeClasses();
 
     let cards = [];
 
     while (cards.length < CARD_NUMBER)
     {
-        const index = Math.floor(Math.random() * emojis.length)
+        const index = Math.floor(Math.random() * fontAwesomeClasses.length)
         const card = {
-            icon: emojis.splice(index, 1)[0],
+            icon: fontAwesomeClasses.splice(index, 1)[0],
             guessed : false,
         }
 
@@ -20,4 +20,4 @@ export default () => {
         cards.push({...card});
     }
     return shuffle(cards);
-}
+};

@@ -7,7 +7,9 @@ export default class Board extends Component {
         // const cards =[1,2,3,4,5]
         return (
             <div className="board">
-                {this.props.deck.map((card)=><Card emoji={card.emoji}/>)}
+                {
+                    this.props.deck.map((card)=><Card icon={card.icon}/>)
+                }
             </div>
         )
     }

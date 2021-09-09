@@ -5,7 +5,7 @@ export default class Card extends Component {
     render() {
         return (
             <div className="card">
-                <i className={`${this.props.emoji}`}/>
+                <i className={`fa ${this.props.icon} fa-5x`}></i>
             </div>
         )
     }
