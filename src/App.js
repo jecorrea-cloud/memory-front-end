@@ -24,13 +24,15 @@ export default class App extends Component {
     if (
       this.state.isFlipped ||
       this.state.selectedPair.indexOf(card) > -1 ||
-      card.guessed
+      card.wasGuessed
     ) {
       return;
     }
 
     const selectedPair = [...this.state.selectedPair, card];
-    this.setState({ selectedPair });
+    this.setState({ 
+      selectedPair 
+    });
 
     if (selectedPair.length === 2) {
       this.compareCards(selectedPair);
@@ -41,8 +43,10 @@ export default class App extends Component {
     this.setState({ isFlipped: true });
 
     setTimeout(() => {
-      const [firstCard, secondCard] = selectedPair;
+      const [firstCard, secondCard] = 
+      selectedPair;
       let deck = this.state.deck;
+
       if (firstCard.icon === secondCard.icon) {
         deck = deck.map((card) => {
           if (card.icon !== firstCard.icon) {
@@ -59,14 +63,16 @@ export default class App extends Component {
         isFlipped: false,
         numOfGuesses: this.state.numOfGuesses + 1,
       });
-    }, 1000);
+    }, 1000)
   }
 
   verifyWinner(deck) {
     deck.forEach((card) => (card.wasGuessed = true));
-    if (deck.filter((card) => !card.wasGuessed).length === 0) {
-      alert(`You've won on ${this.state.numOfGuesses} tries!`);
-    }
+    if (
+      deck.filter((card) => !card.wasGuessed).length === 0) 
+      {
+        alert(`You've won on ${this.state.numOfGuesses} tries!`);
+      }
   }
 
   // resetGame() {
