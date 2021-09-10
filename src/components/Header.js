@@ -7,13 +7,13 @@ export default class Header extends Component {
             <header>
                 <div className="title">Memory-Game</div>
                 <div>
-                    <button className="restart-button">Reset</button>
+                    <button className="restart-button" onClick={this.props.resetGame}>Reset</button>
                 </div>
                 <div className="title">
-                    Tries:
+                    Tries: {this.props.numOfGuesses}
                 </div>
                 <div className="title">
-                    Scores:
+                    Scores: {}
                 </div>
             </header>
         )
