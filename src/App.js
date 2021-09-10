@@ -65,22 +65,22 @@ export default class App extends Component {
   verifyWinner(deck) {
     deck.forEach((card) => (card.wasGuessed = true));
     if (deck.filter((card) => !card.wasGuessed).length === 0) {
-      alert(`You've won on ${this.state.numOfGuesses}!`);
+      alert(`You've won on ${this.state.numOfGuesses} tries!`);
     }
   }
 
-  resetGame() {
-    this.setState(
-      getInitialState()
-    );
-  }
+  // resetGame() {
+  //   this.setState(
+  //     getInitialState()
+  //   );
+  // }
 
   render() {
     return (
       <div className="App">
         <Header
           numOfGuesses={this.state.numOfGuesses}
-          resetGame={this.resetGame()}
+          // resetGame={this.resetGame()}
         />
         <Board
           deck={this.state.deck}
