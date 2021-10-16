@@ -76,9 +76,7 @@ export default class App extends Component {
   }
 
   // resetGame() {
-  //   this.setState(
-  //     getInitialState()
-  //   );
+  //   window.location.reload();
   // }
 
   render() {
@@ -86,7 +84,7 @@ export default class App extends Component {
       <div className="App">
         <Header
           numOfGuesses={this.state.numOfGuesses}
-          // resetGame={this.resetGame()}
+          resetGame={this.resetGame()}
         />
         <Board
           deck={this.state.deck}

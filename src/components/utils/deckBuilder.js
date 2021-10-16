@@ -13,7 +13,7 @@ export default () => {
         const index = Math.floor(Math.random() * fontAwesomeClasses.length)
         const card = {
             icon: fontAwesomeClasses.splice(index, 1)[0],
-            guessed : false,
+            wasGuessed : false,
         }
 
         cards.push(card);
